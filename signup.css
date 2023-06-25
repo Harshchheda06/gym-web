@@ -122,10 +122,10 @@ body {
 
 @media(max-width:600px)
 {
-   *{
+   /* *{
       font-size: 1vh;
 
-   }
+   } */
    .wel{
       font-size: 3.5vh;
       margin: 0 0 0 1em;
