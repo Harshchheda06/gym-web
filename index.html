@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <script src="form.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="name">
+        <span><img id="logo" src="OIP.jpg" alt=""></span>
+        <span class="head">
+            <strong class="wel"> Welcome to H9 Fitness</strong></span>
+    </div>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form onsubmit="return fc()" action="project.php"  name="myForm" method="post">
+            <div class="user-box"> <input type="text" id="fname" name="fname" placeholder="enter the first name"></div>
+            <div class="user-box"> <input type="text" name="lname" placeholder="enter the last name"></div>
+            <div class="user-box"><input type="password" name="pass" placeholder="set the password of length atleast 8"></div>
+            <div class="user-box"><input type="password" name="cp" placeholder="confirm the password">
+            </div>
+            <div class="user-box">DOB: <input type="date" name="date"></div>
+            <div class="user-box"> <input type="email" name="email" placeholder="enter your email adddress">
+                <div class="user-box"><input type="text" name="ph" placeholder="Enter valid phone number" ></div>
+            </div>
+            <div class="user-box"> Gender: Male<input type="radio" name="gender" value="male"></div>
+            <div class="user-box">Female<input type="radio" name="gender" value="Female"></div>
+            <div class="user-box">Other:<input type="radio" name="gender" value="Other"></div>
+            <div class="user-box"> Attach photo here:<input type="file"></div>
+            <div class="user-box" id="Q"> Qualification <select style="color:white;background-color:#131315;"
+                    name="qual">
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="undergraduation">undergraduation</option>
+                </select>
+            </div>
+            <br><br>
+            <input type="hidden" name="function" value="signin">
+
+            <div class="button-form">
+
+                <!-- <a id="submit" href="#"> -->
+                    <input id="submit" type="submit">
+                    
+             
+
+                <div id="register">
+                    Already have an account ?
+                    <a href="vltsignin.html">
+                        Sign in
+                    </a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+

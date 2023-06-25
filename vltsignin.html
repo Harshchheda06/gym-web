@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vltsignin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="name">
+        <span><img id="logo" src="OIP.jpg" alt=""></span>
+    <span class="head">
+        <strong class="wel"> Welcome to H9 Fitness</strong></span>
+    </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="project.php" method="post">
+            <div class="user-box">
+                <input type="text" name="emailadd" required="" placeholder="email address">
+                <!-- <label>Username</label> -->
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required="" placeholder="Password">
+                <!-- <label>Password</label> -->
+            </div>
+            <input type="hidden" name="function" value="loginch">
+            <div class="button-form">
+
+                <!-- <a id="submit" href="#"> -->
+                   <input id="submit" type="submit">
+                <!-- </a> -->
+
+                <div id="register">
+                    Don't have an account ?
+                    <a href="signup.html">
+                        Register
+                    </a>
+                    <br>
+                    Admin?
+                    <a href="admin_login.html">Admin Login</a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+</html>
