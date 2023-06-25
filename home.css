@@ -34,6 +34,9 @@
     display: flex;
 }
 
+
+
+
 #cimg{
     width: 300px;
     height: 187px;
@@ -117,6 +120,7 @@ body {
     padding: 10px;
     overflow: hidden;
     position: sticky;
+    width: 100%;
     top: 0px;
     background-color: rgb(123, 114, 165);
 }
@@ -171,13 +175,15 @@ body {
 }
 
 #logo {
-    margin-left: 0;
     top: 20px;
+    display: inline-block;
     animation-name: logo;
     animation-duration: 2.5s;
     animation-delay: 1s;
+    filter:invert(100%);
+    opacity: 0.9;
+    border-radius: 35%;
     animation-iteration-count: infinite;
-    border-radius: 50%;
 }
 
 @keyframes logo {
@@ -218,14 +224,13 @@ body {
 
 
 .wel {
-    text-shadow: 2px 2px 5px rgb(164, 151, 227), 2px 2px 5px rgb(145, 125, 243);
-    display: inline-block;
-    top: 0px;
-    color: #060606;
-    text-decoration: wavy;
+
+    text-shadow: 2px 2px 5px rgb(143, 124, 236),2px 2px 5px rgb(145, 125, 243);
+    margin: 0px 0px 0px 100px;
     text-decoration-color: antiquewhite;
     font-size: 70px;
-    margin: 0px 0px 20px 70px;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .list {
@@ -316,4 +321,47 @@ footer {
     width: 50%; /* Added this line to make the image fill the container */
     height: 50%    ; /* Added this line to make the image fill the container */
     /* object-fit: cover; Added this line to maintain aspect ratio and cover the container */
+}
+
+
+@media(max-width:600px)
+{
+   /* *{
+      font-size: 1vh;
+
+   } */
+   .wel{
+    font-size: 4vh;
+    margin: 0 0 0 1em;
+    }
+
+    #logo{
+       height: 10vw;
+
+    }
+      
+    .carousel{
+        height: 10vh;
+        width: 10vw;
+    }
+
+    .container{
+        height: 10vh;
+        width: 10vw;
+        margin-left: 2px;
+    }
+
+    /* .image{
+        height: 20vh;
+        width: 10vw;
+    } */
+
+    .nav>li>a{
+        margin-top: 5px;
+    }
+
+    .nav li{
+        margin-left: 0px;
+    }
+
 }
