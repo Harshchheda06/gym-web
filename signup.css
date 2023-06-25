@@ -4,10 +4,12 @@
 }
 
 * {
-   box-sizing: border-box;
+   /* box-sizing: border-box; */
    font-size: small;
    color: aliceblue;
 }
+
+
 
 body {
    background: #131315;
@@ -26,7 +28,7 @@ body {
    border-radius: 10px;
 }
 
-.login-box h2 {
+.login-box .login_heading {
    margin: 0 0 30px;
    padding: 0;
    color: #fff;
@@ -116,6 +118,61 @@ body {
     font-size: 70px;
     color: black;
     font-family:'Times New Roman', Times, serif;
+}
+
+@media(max-width:600px)
+{
+   *{
+      font-size: 1vh;
+
+   }
+   .wel{
+      font-size: 3.5vh;
+      margin: 0 0 0 1em;
+      }
+
+      #logo{
+         height: 10vw;
+
+      }
+
+   .login-box{
+      position: absolute;
+   top: 10%;
+   left: 5vw;
+   width: 80vw;
+   font-size: 1vh;
+   /* padding: 10px; */
+
+
+   }
+
+   .login-box .user-box label {
+      position: relative;
+      left: 0;
+      top: -60px;
+      padding: 10px 0;
+      font-size: 0.5vw;
+      color: #fff;
+      pointer-events: none;
+      transition: .5s;
+   }
+
+   .user-box{
+      height: 7vh;
+   }
+
+   .login_heading{
+      font-size: 1vh;
+      text-align: center;
+      margin-bottom: 2px;
+   }
+
+   #file{
+      font-size: 2vh;
+      /* height: 4vh; */
+   }
+
 }
 
 .name{
