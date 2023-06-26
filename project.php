@@ -70,7 +70,7 @@ function Adlogin()
     $storedpw = $row['password'];
     if ($pass == $storedpw) {
         echo "welcome";
-        header("Location: admin_home.html");
+        header("Location: admin_home.php");
         exit();
 
     } else
