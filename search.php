@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
-    <link href="search.css" rel="stylesheet">
-</head>
-<body>
-    <span><img id="logo" src="OIP.jpg" alt=""></span>
-    <span class="head">
-        <strong class="wel"> Welcome to H9 Fitness</strong>
-    </span>
-   
-    <ul class="nav">
-        <li><a class="active" href="admin_home.php">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="meminfo.php">My Info</a></li>
-        <form id="searchForm" action="project.php" method="post">
-            <input class="search" name="search" type="search" placeholder="search a member">
-            <input type="hidden" value="search_mem" name="function">
-         
-        </form>
-    </ul>
+<?php
+require_once("website_body.html");
+?>
+
+
+
 <?php
 $func=$_POST['function'];
 if($func=='search_mem')
@@ -44,15 +22,55 @@ function search_mem()
     // echo "successful connection<br>";    
     $search = $_POST["search"];
     $sql="SELECT * FROM users JOIN memberships ON users.email = memberships.email WHERE users.email = '$search'";
-    $result = mysqli_query($conn, $sql);
-    // if(mysqli_num_rows($result)>0){
-        $row = mysqli_fetch_assoc($result);
-            echo "Name :    "   .    $row['fname']    . " ".$row['lname']. "<br><br>Email:     ".$row['email']."<br><br>Joining Date:    ".$row['j_date']. "<br><br>Membership Expiry Date:    ".$row['e_date']. "<br><br>Phone NO:    ".$row['ph'].    "<br><br>Membership Duration:     "   .$row['membership_duration'] ;
+    // $sql = "SELECT u.*, m.j_date, m.e_date
+    //     FROM users u
+    //     INNER JOIN memberships m ON u.email = m.email
+    //     where email='$search'";
+         $result = mysqli_query($conn, $sql); ?>
+<!-- //    $result = mysqli_query($conn, $sql);
+//     // if(mysqli_num_rows($result)>0){
+//         $row = mysqli_fetch_assoc($result);
+//             echo "Name :    "   .    $row['fname']    . " ".$row['lname']. "<br><br>Email:     ".$row['email']."<br><br>Joining Date:    ".$row['j_date']. "<br><br>Membership Expiry Date:    ".$row['e_date']. "<br><br>Phone NO:    ".$row['ph'].    "<br><br>Membership Duration:     "   .$row['membership_duration'] ;
         // }
 
-    // }
+    // } -->
 
-}
-?>
+<!-- } -->
+
+<table class="table table-striped" style="color: white;">
+    <tr>
+        <th>fname</th>
+        <th>lname</th>
+        <th>dob</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>gender</th>
+        <th>joining date</th>
+        <th>expiration date</th>
+    </tr>
+
+    <?php
+ $row = mysqli_fetch_assoc($result) ;
+        $expirationDate = strtotime($row['e_date']);
+        $today = strtotime(date("Y-m-d"));
+
+        echo "<tr";
+        if ($expirationDate < $today) {
+            echo " style='background-color: red;'";
+        }
+        echo ">";
+        echo "<td>" . $row['fname'] . "</td>";
+        echo "<td>" . $row['lname'] . "</td>";
+        echo "<td>" . $row['dob'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "<td>" . $row['ph'] . "</td>";
+        echo "<td>" . $row['gender'] . "</td>";
+        echo "<td>" . $row['j_date'] . "</td>";
+        echo "<td>" . $row['e_date'] . "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
+
 </body>
 </html>

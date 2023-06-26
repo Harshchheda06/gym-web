@@ -17,7 +17,7 @@
         <li><a class="active" href="admin_home.php">Home</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="view_all_mem.php">View All Members</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="meminfo.php">My Info</a></li>
         <form id="searchForm" action="search.php" method="post">

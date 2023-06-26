@@ -124,3 +124,24 @@ body {
     font-size: 70px;
     margin: 0px 0px 20px 70px;
 }
+
+
+table,
+th,
+td {
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(143, 124, 236);
+    border-collapse: collapse;
+    padding: 20px;
+    margin-left: 50px;
+
+    font-size: large;
+}
+
+td {
+    border-radius: 10px;
+    border: 2px dotted rgb(143, 124, 236);
+    padding: 20px;
+}
