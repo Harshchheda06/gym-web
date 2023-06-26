@@ -63,7 +63,7 @@
         </select>
         <br><br>
        <input type="hidden" value="renew_mem" name="function">
-       <input id="submit" type="submit">
+       <input id="submit" type="submit" onclick="return confirm('sure');">
     </form>
    </div>
    
